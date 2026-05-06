@@ -21,8 +21,10 @@ async function getSchedule() {
             axios.get(VEHICLES_API, { headers })
         ]);
 
-        const depots = depotsRes.data;
-        const vehicles = vehiclesRes.data;
+        const depots = depotsRes.data.depots || depotsRes.data;
+        const vehicles = vehiclesRes.data.vehicles || vehiclesRes.data;
+        console.log("DEBUG DEPOTS:", JSON.stringify(depots).substring(0, 200));
+        console.log("DEBUG VEHICLES:", JSON.stringify(vehicles).substring(0, 200));
 
         Log("backend", "info", "service", `Successfully fetched ${depots.length} depots and ${vehicles.length} vehicles.`);
 
@@ -46,10 +48,11 @@ async function getSchedule() {
             });
         }
 
-        Log("backend", "info", "service", "Knapsack schedule successfully calculated.");
+        Log("backend", "info", "service", "Knapsack schedule calculated.");
         return schedule;
     } catch (error) {
-        Log("backend", "error", "service", `Failed to generate schedule: ${error.message}`);
+        console.error("DEBUG ERROR:", error?.response?.data || error);
+        Log("backend", "error", "service", `Failed to gen schedule`);
         throw new Error('Failed to generate schedule');
     }
 }

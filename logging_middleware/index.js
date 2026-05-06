@@ -18,6 +18,10 @@ async function getAuthToken() {
 
     try {
         const response = await axios.post(`${TEST_SERVER_BASE_URL}/auth`, {
+            email: process.env.EMAIL,
+            name: process.env.NAME,
+            rollNo: process.env.ROLL_NO,
+            accessCode: process.env.ACCESS_CODE,
             clientID: process.env.CLIENT_ID,
             clientSecret: process.env.CLIENT_SECRET
         });
@@ -52,7 +56,7 @@ async function Log(stack, level, pkg, message) {
             stack: stack.toLowerCase(),
             level: level.toLowerCase(),
             package: pkg.toLowerCase(),
-            message: message
+            message: message.substring(0, 48)
         };
 
         await axios.post(`${TEST_SERVER_BASE_URL}/logs`, payload, {

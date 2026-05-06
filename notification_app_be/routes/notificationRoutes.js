@@ -26,7 +26,7 @@ router.get('/all', async (req, res) => {
             headers: { 'Authorization': `Bearer ${token}` }
         });
         
-        const notifications = response.data;
+        const notifications = response.data.notifications || response.data;
         Log("backend", "info", "service", `Fetched ${notifications.length} notifications from remote server.`);
         
         const ops = notifications.map(notif => ({
