@@ -17,25 +17,3 @@ This repository contains the solution for the backend track assessment. The proj
 4. **Mass Notification**: Asynchronous batch-processing queue system to handle large-scale notification dispatch (50,000+ users) without blocking.
 5. **Centralized Logging**: Middleware that ensures all significant application lifecycle events are recorded with proper context.
 
-## Setup
-
-1. **Install Dependencies**:
-   Navigate into each directory and run:
-   ```bash
-   npm install
-   ```
-2. **Environment Configuration**:
-   Create a `.env` file in both `vehicle_maintence_scheduler/` and `notification_app_be/` with the following variables:
-   - `PORT`: Port for the service.
-   - `MONGODB_URI`: MongoDB connection string.
-   - `CLIENT_ID`: Your unique client ID.
-   - `CLIENT_SECRET`: Your unique client secret.
-   - `EMAIL`: Registered email.
-   - `NAME`: Registered name.
-   - `ROLL_NO`: Registered roll number.
-   - `ACCESS_CODE`: Access code.
-
-3. **Start Services**:
-   ```bash
-   npm start
-   ```
