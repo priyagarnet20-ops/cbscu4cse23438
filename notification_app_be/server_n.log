@@ -1,0 +1,18 @@
+
+> notification-app-be@1.0.0 start
+> node server.js
+
+Critical: Failed to obtain Auth Token from Test Server connect ETIMEDOUT 20.207.122.201:80
+Log aborted due to missing Auth Token.
+Critical: Failed to obtain Auth Token from Test Server connect ETIMEDOUT 20.207.122.201:80
+Log aborted due to missing Auth Token.
+Critical: Failed to obtain Auth Token from Test Server connect ETIMEDOUT 20.207.122.201:80
+Critical: Failed to obtain Auth Token from Test Server connect ETIMEDOUT 20.207.122.201:80
+Log aborted due to missing Auth Token.
+Critical: Failed to obtain Auth Token from Test Server connect ETIMEDOUT 20.207.122.201:80
+Log aborted due to missing Auth Token.
+Critical: Failed to obtain Auth Token from Test Server connect ETIMEDOUT 20.207.122.201:80
+Critical: Failed to obtain Auth Token from Test Server connect ETIMEDOUT 20.207.122.201:80
+Log aborted due to missing Auth Token.
+Critical: Failed to obtain Auth Token from Test Server connect ETIMEDOUT 20.207.122.201:80
+Log aborted due to missing Auth Token.
